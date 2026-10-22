@@ -1,0 +1,6 @@
+# Keep every file byte-exact across platforms.
+#
+# app-ads.txt is parsed strictly by Google's crawler. A stray CRLF or BOM
+# can make AdMob report a broken file, so line endings are pinned to LF
+# here instead of relying on each machine's core.autocrlf setting.
+* text=auto eol=lf

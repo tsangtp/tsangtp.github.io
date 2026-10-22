@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今晚吃什麼 · 餐廳輪盤 — Dinner Roulette</title>
+<meta name="description" content="今晚吃什麼 · 餐廳輪盤 — 選擇困難救星。開啟定位，轉一次輪盤，從附近餐廳裡隨機抽一間。">
+<link rel="canonical" href="https://tsangtp.github.io/">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1b1f;
+    --muted: #5f5c66;
+    --rule: #e3e1e6;
+    --accent: #b35a1f;
+    --card: #faf7f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14131a;
+      --fg: #e6e1e6;
+      --muted: #a8a4b0;
+      --rule: #34323c;
+      --accent: #ffb785;
+      --card: #1d1b23;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 20px 80px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin: 0 0 .2em; }
+  p.sub { color: var(--muted); margin: 0 0 24px; }
+  p.lead { margin: 0 0 28px; }
+  a.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 0 0 32px;
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  a.btn:hover { opacity: .88; }
+  h2 {
+    font-size: .8rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 32px 0 8px;
+  }
+  a.card {
+    display: block;
+    padding: 18px 20px;
+    margin: 12px 0;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--fg);
+    transition: border-color .15s;
+  }
+  a.card:hover { border-color: var(--accent); }
+  a.card strong { color: var(--accent); display: block; margin-bottom: 2px; }
+  a.card span { color: var(--muted); font-size: .9rem; }
+  footer {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>今晚吃什麼 · 餐廳輪盤</h1>
+  <p class="sub">Dinner Roulette — 轉一圈，決定今晚吃哪間</p>
+
+  <p class="lead">
+    選擇困難救星。開啟定位，轉一次輪盤，就從附近的餐廳裡隨機抽一間。
+    也可以自己建立輪盤清單、收藏愛店、翻看抽籤紀錄。
+  </p>
+
+  <a class="btn" href="https://apps.apple.com/hk/app/id6819780356">在 App Store 下載</a>
+
+  <h2>支援與法律文件</h2>
+
+  <a class="card" href="nearby-restaurant-legal/support.html">
+    <strong>支援 · Support</strong>
+    <span>常見問題、疑難排解與聯絡方式 · 繁中／English</span>
+  </a>
+  <a class="card" href="nearby-restaurant-legal/privacy.html">
+    <strong>隱私政策 · Privacy Policy</strong>
+    <span>我們收集什麼、如何使用與保存 · 繁體中文</span>
+  </a>
+  <a class="card" href="nearby-restaurant-legal/privacy.en.html">
+    <strong>Privacy Policy (English)</strong>
+    <span>What we collect, how we use and retain it · English</span>
+  </a>
+  <a class="card" href="nearby-restaurant-legal/terms.html">
+    <strong>服務條款 · Terms of Service</strong>
+    <span>使用本 App 的權利與限制 · 繁體中文</span>
+  </a>
+  <a class="card" href="nearby-restaurant-legal/terms.en.html">
+    <strong>Terms of Service (English)</strong>
+    <span>Your rights and restrictions when using the app · English</span>
+  </a>
+
+  <footer>
+    © 2026 今晚吃什麼 · 餐廳資料 © Google，依 Google Maps Platform 條款使用。
+  </footer>
+</main>
+</body>
+</html>

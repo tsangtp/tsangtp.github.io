@@ -1,0 +1,19 @@
+# https://tsangtp.github.io/robots.txt
+#
+# This host serves the app-ads.txt file used for AdMob / Google Ads
+# publisher verification. Every crawler must be able to read it, so
+# nothing is disallowed here.
+
+User-agent: *
+Allow: /
+
+# AdMob / Google Ads crawlers (app-ads.txt verification)
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Google-AdsTxt
+Allow: /
+
+# Google's own app-ads.txt fetcher
+User-agent: Googlebot
+Allow: /
