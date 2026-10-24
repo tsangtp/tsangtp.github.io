@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隱私政策 — 今晚吃什麼 · 餐廳輪盤</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1b1f;
+    --muted: #5f5c66;
+    --rule: #e3e1e6;
+    --accent: #b35a1f;
+    --card: #faf7f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14131a;
+      --fg: #e6e1e6;
+      --muted: #a8a4b0;
+      --rule: #34323c;
+      --accent: #ffb785;
+      --card: #1d1b23;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 80px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 4px; }
+  h2 {
+    font-size: 1.12rem;
+    margin: 2.2em 0 .6em;
+    padding-top: .9em;
+    border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  .meta { color: var(--muted); font-size: .875rem; margin: 0 0 8px; }
+  .lead {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0 8px;
+  }
+  ul { padding-left: 1.3em; }
+  li { margin: .35em 0; }
+  code {
+    background: var(--card);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: .9em;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+  .lang { text-align: right; font-size: .82rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+
+<p class="lang">繁體中文 · <a href="privacy.en.html">English</a></p>
+
+<h1>隱私政策</h1>
+<p class="meta">適用於「今晚吃什麼 · 餐廳輪盤」行動應用程式<br>
+最後更新：2026 年 10 月 9 日 &nbsp;·&nbsp; 生效日期：2026 年 10 月 5 日</p>
+
+<div class="lead">
+  <strong>一句話總結：</strong>我們不建立帳號、不收集你的個人身分資訊、不販售任何資料。
+  你的收藏、歷史與抽籤紀錄<strong>只存在你自己的手機裡</strong>。
+  為了搜尋附近的餐廳，App 會把你的<strong>精確位置（經緯度）</strong>傳給 Google Places API。
+</div>
+
+<h2>1. 我們收集什麼</h2>
+
+<p><strong>1.1 位置資訊（僅在使用 App 期間）</strong></p>
+<ul>
+  <li>當你按下「搜尋附近的餐廳」時，App 會向系統要求<strong>使用期間位置權限</strong>（
+      <code>NSLocationWhenInUseUsageDescription</code>）。</li>
+  <li>取得的經緯度會連同搜尋半徑一起送往 <strong>Google Places API</strong>，
+      用來找出你附近的餐廳。這是本 App 唯一會離開你裝置的個人相關資訊。</li>
+  <li>我們<strong>不會</strong>在背景追蹤你的位置，也<strong>不會</strong>保存你的移動軌跡。
+      你隨時可以在 iOS「設定 → 隱私權與安全性 → 定位服務」中關閉權限；
+      關閉後仍可手動輸入地點或使用其他功能。</li>
+</ul>
+
+<p><strong>1.2 你自願輸入的內容</strong></p>
+<ul>
+  <li>自訂輪盤的選項名稱（例如「樓下的麵店」）。這些文字只寫入你手機上的本機資料庫。</li>
+  <li>搜尋關鍵字（例如「火鍋」）。關鍵字會送往 Google Places API 以取得結果。</li>
+</ul>
+
+<p><strong>1.3 儲存在你裝置上的資料</strong></p>
+<ul>
+  <li>收藏清單、搜尋歷史、抽籤紀錄、輪盤選項、語言與深色模式偏好。</li>
+  <li>儲存於 App 私有的本機資料庫（SQLite）；<strong>不會</strong>上傳到我們的伺服器
+      ——我們<strong>沒有</strong>存放你資料的伺服器。</li>
+  <li>移除 App 即會一併刪除這些資料。你也可以在 App 內「設定 → 資料」中逐項清除。</li>
+</ul>
+
+<p><strong>1.4 我們「不」收集的</strong></p>
+<ul>
+  <li>姓名、電子郵件、電話號碼或任何帳號資訊（本 App 沒有註冊或登入功能）。</li>
+  <li>通訊錄、照片、麥克風、相機或健康資料。</li>
+  <li>使用行為分析或當機回報：App 本身不蒐集；廣告 SDK（Google AdMob）之診斷資料見
+      「2. 第三方服務」一節。</li>
+</ul>
+
+<h2>2. 第三方服務</h2>
+
+<p><strong>2.1 Google Places API</strong></p>
+<p>餐廳的名稱、地址、評分、營業狀態、價位與相片，皆由 Google Places API 提供。
+App 會把「精確位置（經緯度）/ 搜尋關鍵字 / 餐廳 ID」送至 Google 以取得這些內容。
+Google 對這些請求的處理方式，適用 Google 自身的隱私權政策：</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+  <li><a href="https://cloud.google.com/maps-platform/terms" rel="noopener noreferrer">Google Maps Platform 服務條款</a></li>
+</ul>
+
+<p><strong>2.2 我們自己的中繼伺服器（代理）</strong></p>
+<p>為了避免把 API 金鑰放進 App，請求會先經過我們以 Cloudflare Workers 架設的輕量代理。
+該代理<strong>只做轉發</strong>，不會記錄或保存你的位置與查詢內容；
+其日誌僅包含無法回溯至個人的技術性資訊（請求時間、狀態碼）。</p>
+
+<p><strong>2.3 Google AdMob（廣告服務）</strong></p>
+<p>App 使用 Google AdMob 顯示<strong>非個人化</strong>橫幅廣告。AdMob 可能收集裝置資訊
+（如裝置型號、作業系統版本、粗略地區）與廣告互動資料，用於廣告投放與防範無效流量。
+我們<strong>不會</strong>使用廣告識別碼（IDFA）跨 App 追蹤你。
+詳見 Google 廣告政策：
+<a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></p>
+
+<h2>3. 資料分享與販售</h2>
+<p>我們<strong>不販售、不租借、不交換</strong>你的個人資料。除以下情形外，不會將資料提供給第三方：</p>
+<ul>
+  <li>為完成你要求的功能，將必要資訊傳給上述 Google Places API（如第 2 節所述）。</li>
+  <li>法律要求：若依法令或有效法律程序必須提供，我們會在合法範圍內配合。</li>
+  <li>廣告服務：如第 2 節所述，Google AdMob SDK 會基於其自身政策收集裝置與廣告互動資料；
+      我們不會把你建立的收藏、搜尋歷史或抽籤紀錄提供給廣告商。</li>
+</ul>
+
+<h2>4. 資料保存與刪除</h2>
+<ul>
+  <li>你的餐廳清單與偏好只存在裝置上，保存到你自行刪除或移除 App 為止。</li>
+  <li>依 Google Places 條款，App 對來自 Google 的餐廳內容（名稱、地址、評分等）
+      採即時查詢、不作長期保存；僅餐廳的 <code>place_id</code> 會被保留，
+      以便重新查詢最新資訊。</li>
+</ul>
+
+<h2>5. 兒童隱私</h2>
+<p>本 App 並非設計給 13 歲以下兒童使用，我們不會刻意收集兒童的個人資訊。
+由於本 App 不收集任何具名個人資料，實務上也不會持有兒童資料。</p>
+
+<h2>6. 你的權利</h2>
+<ul>
+  <li><strong>存取與刪除：</strong>你的資料在你手上——在 App 內「設定 → 資料」即可清除，
+      或直接移除 App。</li>
+  <li><strong>撤回同意：</strong>可隨時在系統設定中關閉定位權限。</li>
+  <li>若你所在司法管轄區（如歐盟 GDPR、加州 CCPA）賦予你額外權利，
+      由於我們不持有你的個人資料，多數請求可直接透過上述操作完成。</li>
+</ul>
+
+<h2>7. 安全</h2>
+<p>與 Google 及代理伺服器之間的通訊一律使用 HTTPS 加密。
+API 金鑰儲存在伺服器端的密鑰管理系統中，不會隨 App 散佈。
+但請理解：沒有任何傳輸方式或儲存技術能保證百分之百安全。</p>
+
+<h2>8. 政策變更</h2>
+<p>若本政策有重大變更，我們會更新本頁的「最後更新」日期，
+並在必要時於 App 內以顯著方式通知你。繼續使用即代表你接受更新後的政策。</p>
+
+<h2>9. 聯絡我們</h2>
+<p>對本隱私政策有任何疑問，請來信：
+<a href="mailto:tsangtakpu@yahoo.com">tsangtakpu@yahoo.com</a></p>
+
+<footer>
+  今晚吃什麼 · 餐廳輪盤 · 本 App 與 Google LLC 無隸屬或背書關係。<br>
+  餐廳資料 © Google，依 Google Maps Platform 條款使用。
+</footer>
+
+</main>
+</body>
+</html>

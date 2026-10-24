@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Dinner Roulette (Nearby Restaurant Picker)</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1b1f;
+    --muted: #5f5c66;
+    --rule: #e3e1e6;
+    --accent: #b35a1f;
+    --card: #faf7f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14131a;
+      --fg: #e6e1e6;
+      --muted: #a8a4b0;
+      --rule: #34323c;
+      --accent: #ffb785;
+      --card: #1d1b23;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 80px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 4px; }
+  h2 {
+    font-size: 1.12rem;
+    margin: 2.2em 0 .6em;
+    padding-top: .9em;
+    border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  .meta { color: var(--muted); font-size: .875rem; margin: 0 0 8px; }
+  .lead {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0 8px;
+  }
+  ul { padding-left: 1.3em; }
+  li { margin: .35em 0; }
+  code {
+    background: var(--card);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: .9em;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+  .lang { text-align: right; font-size: .82rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+
+<p class="lang">English · <a href="privacy.html">繁體中文</a></p>
+
+<h1>Privacy Policy</h1>
+<p class="meta">For the "Dinner Roulette (Nearby Restaurant Picker)" mobile application<br>
+Last updated: October 9, 2026 &nbsp;·&nbsp; Effective: October 5, 2026</p>
+
+<div class="lead">
+  <strong>In one sentence:</strong> We do not create accounts, we do not collect personally
+  identifying information, and we do not sell any data. Your favorites, history, and draw
+  records <strong>stay on your own device</strong>. To find nearby restaurants, the app sends
+  your <strong>precise location (latitude and longitude)</strong> to the Google Places API.
+</div>
+
+<h2>1. What We Collect</h2>
+
+<p><strong>1.1 Location (while using the app only)</strong></p>
+<ul>
+  <li>When you tap "Find nearby restaurants," the app requests
+      <strong>when-in-use location permission</strong> (<code>NSLocationWhenInUseUsageDescription</code>).</li>
+  <li>The coordinates are sent, together with the search radius, to the
+      <strong>Google Places API</strong> to find restaurants near you. This is the only
+      personally related information that ever leaves your device.</li>
+  <li>We do <strong>not</strong> track your location in the background and do <strong>not</strong>
+      store your movement history. You may revoke the permission at any time in
+      iOS "Settings → Privacy &amp; Security → Location Services"; other features remain
+      usable afterward.</li>
+</ul>
+
+<p><strong>1.2 Content you voluntarily enter</strong></p>
+<ul>
+  <li>Custom wheel option names (e.g. "the noodle shop downstairs"). This text is written
+      only to your device's local database.</li>
+  <li>Search keywords (e.g. "hot pot"). Keywords are sent to the Google Places API to
+      retrieve results.</li>
+</ul>
+
+<p><strong>1.3 Data stored on your device</strong></p>
+<ul>
+  <li>Favorites, search history, draw records, wheel options, language and dark-mode preferences.</li>
+  <li>Stored in the app's private local database (SQLite); <strong>never</strong> uploaded to our
+      servers — we <strong>have no</strong> servers holding your data.</li>
+  <li>Deleting the app deletes this data. You can also clear each category in
+      "Settings → Data" inside the app.</li>
+</ul>
+
+<p><strong>1.4 What we do NOT collect</strong></p>
+<ul>
+  <li>Name, email address, phone number, or any account information (no sign-up or login).</li>
+  <li>Contacts, photos, microphone, camera, or health data.</li>
+  <li>Usage analytics or crash reporting: the App itself collects none; the advertising
+      SDK (Google AdMob) diagnostic data is described in the "2. Third-Party Services" section.</li>
+</ul>
+
+<h2>2. Third-Party Services</h2>
+
+<p><strong>2.1 Google Places API</strong></p>
+<p>Restaurant names, addresses, ratings, opening status, price levels, and photos are
+provided by the Google Places API. The app sends "precise location (latitude and longitude) /
+search keyword / restaurant ID" to Google to obtain them. Google's handling of those requests is governed by
+Google's own privacy policy:</p>
+<ul>
+  <li><a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+  <li><a href="https://cloud.google.com/maps-platform/terms" rel="noopener noreferrer">Google Maps Platform Terms of Service</a></li>
+</ul>
+
+<p><strong>2.2 Our own relay server (proxy)</strong></p>
+<p>To keep the API key out of the app, requests first pass through a lightweight proxy we run
+on Cloudflare Workers. The proxy <strong>only forwards</strong> requests; it does not log or retain
+your location or queries, and its logs contain only non-identifying technical data
+(timestamp, status code).</p>
+
+<p><strong>2.3 Google AdMob (advertising)</strong></p>
+<p>The app uses Google AdMob to display <strong>non-personalized</strong> banner ads. AdMob may
+collect device information (such as device model, OS version, and coarse region) and
+ad-interaction data for ad delivery and invalid-traffic prevention. We do <strong>not</strong>
+use the advertising identifier (IDFA) to track you across apps. See Google's advertising
+policies:
+<a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></p>
+
+<h2>3. Data Sharing and Sale</h2>
+<p>We do <strong>not</strong> sell, rent, or trade your personal data. We disclose information to third
+parties only:</p>
+<ul>
+  <li>To deliver a feature you requested, by sending the necessary information to the
+      Google Places API described in Section 2.</li>
+  <li>When legally required: we comply with valid legal process within the limits of the law.</li>
+  <li>Advertising: as described in section 2, the Google AdMob SDK collects device and
+      ad-interaction data under its own policies. We do not provide your favorites,
+      search history, or draw history to advertisers.</li>
+</ul>
+
+<h2>4. Retention and Deletion</h2>
+<ul>
+  <li>Your restaurant lists and preferences exist only on your device until you delete them
+      or remove the app.</li>
+  <li>Per Google Places terms, Google-sourced restaurant content (name, address, rating, etc.)
+      is fetched on demand and not stored long-term; only the
+      <code>place_id</code> is retained so the latest details can be re-fetched.</li>
+</ul>
+
+<h2>5. Children's Privacy</h2>
+<p>This app is not designed for children under 13, and we do not knowingly collect personal
+information from children. Because the app collects no named personal data, we do not hold
+children's data in practice either.</p>
+
+<h2>6. Your Rights</h2>
+<ul>
+  <li><strong>Access and deletion:</strong> your data is in your hands — clear it in
+      "Settings → Data" or delete the app.</li>
+  <li><strong>Withdraw consent:</strong> disable location permission in system settings at any time.</li>
+  <li>If your jurisdiction (e.g. GDPR in the EU, CCPA in California) grants you additional
+      rights, most requests can be fulfilled through the actions above since we hold none of
+      your personal data.</li>
+</ul>
+
+<h2>7. Security</h2>
+<p>All communication with Google and the proxy server uses HTTPS. The API key is kept in a
+server-side secret manager and is never distributed with the app. Please understand, however,
+that no method of transmission or storage is 100% secure.</p>
+
+<h2>8. Changes to This Policy</h2>
+<p>If this policy changes materially, we will update the "Last updated" date on this page and,
+where appropriate, notify you prominently within the app. Continued use constitutes
+acceptance of the updated policy.</p>
+
+<h2>9. Contact Us</h2>
+<p>Questions about this privacy policy? Email
+<a href="mailto:tsangtakpu@yahoo.com">tsangtakpu@yahoo.com</a></p>
+
+<footer>
+  Dinner Roulette (Nearby Restaurant Picker) · This app is not affiliated with or endorsed by Google LLC.<br>
+  Restaurant data © Google, used under the Google Maps Platform Terms.
+</footer>
+
+</main>
+</body>
+</html>
