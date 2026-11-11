@@ -59,17 +59,25 @@
     color: var(--muted);
     font-size: .875rem;
   }
+  footer a { color: var(--muted); }
   .lang { text-align: right; font-size: .82rem; color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
 
+<!--
+  法務文案狀態：本頁關於「網頁版／商家廣告平台／Stripe／D1」嘅段落係
+  依目前程式碼事實寫嘅草稿，未經人手法律審閱。執行 deploy/legal/publish.sh
+  之前必須由人手逐頁審閱；草稿唔構成資料保留承諾、退款政策或法律主張。
+-->
+
 <p class="lang">English · <a href="terms.html">繁體中文</a></p>
 
 <h1>Terms of Service</h1>
 <p class="meta">For the "Dinner Roulette (Nearby Restaurant Picker)" mobile application<br>
 Last updated: October 9, 2026 &nbsp;·&nbsp; Effective: October 5, 2026</p>
+<p class="meta">The service is also available as a web version at <a href="https://nearby-restaurant.pages.dev">https://nearby-restaurant.pages.dev</a>, so overseas and desktop users can use it in a browser; these Terms apply to the web version as well.</p>
 
 <div class="lead">
   By downloading, installing, or using this app, you agree to these Terms of Service.
@@ -148,9 +156,22 @@ first be addressed through good-faith negotiation.</p>
 <p>Questions about these Terms? Email
 <a href="mailto:tsangtakpu@yahoo.com">tsangtakpu@yahoo.com</a></p>
 
+<h2>11. Merchant Advertising Platform (Web, Optional)</h2>
+<p>The web version also offers an optional merchant advertising platform for
+restaurants that buy a home-screen banner. It requires a merchant account (email plus
+a hashed password), stores the banner image URL and link URL in Cloudflare D1, and
+takes payment through Stripe Checkout; a paid banner is active for 7 days. Section 6
+(“stored only on your device”) describes content entered by general users and does not
+apply to this optional service. See section 10 of the
+<a href="privacy.en.html">Privacy Policy</a> for how that data is handled.</p>
+
 <footer>
   Dinner Roulette (Nearby Restaurant Picker) · Restaurant data © Google, used under the
-  Google Maps Platform Terms.
+  Google Maps Platform Terms.<br>
+  <a href="index.html">Legal documents</a> ·
+  <a href="privacy.en.html">Privacy Policy</a> ·
+  <a href="terms.en.html">Terms of Service</a> ·
+  <a href="support.en.html">Support</a>
 </footer>
 
 </main>

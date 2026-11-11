@@ -65,17 +65,25 @@
     color: var(--muted);
     font-size: .875rem;
   }
+  footer a { color: var(--muted); }
   .lang { text-align: right; font-size: .82rem; color: var(--muted); }
 </style>
 </head>
 <body>
 <main>
 
+<!--
+  法務文案狀態：本頁關於「網頁版／商家廣告平台／Stripe／D1」嘅段落係
+  依目前程式碼事實寫嘅草稿，未經人手法律審閱。執行 deploy/legal/publish.sh
+  之前必須由人手逐頁審閱；草稿唔構成資料保留承諾、退款政策或法律主張。
+-->
+
 <p class="lang">English · <a href="privacy.html">繁體中文</a></p>
 
 <h1>Privacy Policy</h1>
 <p class="meta">For the "Dinner Roulette (Nearby Restaurant Picker)" mobile application<br>
 Last updated: October 9, 2026 &nbsp;·&nbsp; Effective: October 5, 2026</p>
+<p class="meta">The service is also available as a web version at <a href="https://nearby-restaurant.pages.dev">https://nearby-restaurant.pages.dev</a>, so overseas and desktop users can use it in a browser; this policy applies to the web version as well.</p>
 
 <div class="lead">
   <strong>In one sentence:</strong> We do not create accounts, we do not collect personally
@@ -200,9 +208,40 @@ acceptance of the updated policy.</p>
 <p>Questions about this privacy policy? Email
 <a href="mailto:tsangtakpu@yahoo.com">tsangtakpu@yahoo.com</a></p>
 
+<h2>10. Merchant Advertising Platform (Web, Optional)</h2>
+<p>The sections above describe the <strong>general user</strong> experience of the
+restaurant picker. The web version also offers a separate, optional
+<strong>merchant advertising platform</strong> for restaurants that buy a home-screen
+banner. That service does involve server-side data, as follows (technical facts
+verifiable from the service code only):</p>
+<ul>
+  <li><strong>Merchant account:</strong> registration requires an email address and a
+      password. Passwords are stored as a salted <code>PBKDF2-SHA256</code> hash
+      (100,000 iterations, random 16-byte salt); the plaintext password is never
+      stored. Sign-in issues a JWT.</li>
+  <li><strong>Ad content:</strong> the banner <code>image_url</code> and
+      <code>link_url</code> you provide are stored in a Cloudflare D1 database,
+      together with the ad status and its start/end timestamps.</li>
+  <li><strong>Payment:</strong> checkout takes place on Stripe's hosted Checkout page.
+      Card details are entered with Stripe and are never sent to or stored by our
+      service; we receive only the Checkout session id and a signature-verified
+      payment webhook.</li>
+  <li><strong>Duration:</strong> a paid banner is active for 7 days
+      (<code>BANNER_DURATION_DAYS = 7</code>).</li>
+  <li><strong>Public endpoint:</strong> <code>/banners/active</code> selects only the
+      <code>image_url</code> and <code>link_url</code> of active banners from the
+      database. The <code>id</code> and <code>status</code> fields in the response are
+      fixed literal strings, so no internal database identifiers are exposed.</li>
+</ul>
+<p>This section describes the current technical behaviour of the service only.</p>
+
 <footer>
   Dinner Roulette (Nearby Restaurant Picker) · This app is not affiliated with or endorsed by Google LLC.<br>
-  Restaurant data © Google, used under the Google Maps Platform Terms.
+  Restaurant data © Google, used under the Google Maps Platform Terms.<br>
+  <a href="index.html">Legal documents</a> ·
+  <a href="privacy.en.html">Privacy Policy</a> ·
+  <a href="terms.en.html">Terms of Service</a> ·
+  <a href="support.en.html">Support</a>
 </footer>
 
 </main>

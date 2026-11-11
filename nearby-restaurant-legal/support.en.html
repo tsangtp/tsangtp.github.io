@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Dinner Roulette (Nearby Restaurant Picker)</title>
+<meta name="description" content="Official support page for Dinner Roulette: FAQ and troubleshooting for the iOS app and the web version, and how to contact us.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1b1f;
+    --muted: #5f5c66;
+    --rule: #e3e1e6;
+    --accent: #b35a1f;
+    --card: #faf7f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14131a;
+      --fg: #e6e1e6;
+      --muted: #a8a4b0;
+      --rule: #34323c;
+      --accent: #ffb785;
+      --card: #1d1b23;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 80px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 4px; }
+  h2 {
+    font-size: 1.12rem;
+    margin: 2.2em 0 .6em;
+    padding-top: .9em;
+    border-top: 1px solid var(--rule);
+  }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  h3 { font-size: .95rem; margin: 22px 0 4px; }
+  .meta { color: var(--muted); font-size: .875rem; margin: 0 0 8px; }
+  .lead {
+    background: var(--card);
+    border-left: 3px solid var(--accent);
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 20px 0 8px;
+  }
+  .contact {
+    display: block;
+    padding: 18px 20px;
+    margin: 12px 0 8px;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--fg);
+  }
+  .contact strong { color: var(--accent); display: block; margin-bottom: 2px; }
+  .contact span { color: var(--muted); font-size: .9rem; }
+  ul { padding-left: 1.3em; }
+  li { margin: .35em 0; }
+  code {
+    background: var(--card);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: .9em;
+  }
+  a { color: var(--accent); }
+  footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+  footer a { color: var(--muted); }
+  .lang { text-align: right; font-size: .82rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+
+<!--
+  法務／支援文案狀態：本頁關於「網頁版／商家廣告平台／Stripe／D1」嘅段落係
+  依目前程式碼事實寫嘅草稿，未經人手法律審閱。執行 deploy/legal/publish.sh
+  之前必須由人手逐頁審閱；草稿唔構成資料保留承諾、退款政策或法律主張。
+-->
+
+<p class="lang">English · <a href="support.html">繁體中文</a></p>
+
+<h1>Support</h1>
+<p class="meta">Dinner Roulette (Nearby Restaurant Picker) — iOS app and web version</p>
+
+<div class="lead">
+  Dinner Roulette picks a nearby restaurant at random. It is available both as an
+  iOS app and as a web version at
+  <a href="https://nearby-restaurant.pages.dev">https://nearby-restaurant.pages.dev</a>,
+  so desktop users and users outside Hong Kong and Taiwan can use it in a browser.
+</div>
+
+<h2>Contact us</h2>
+<a class="contact" href="mailto:tsangtakpu@yahoo.com?subject=Dinner%20Roulette%20Support">
+  <strong>Email · tsangtakpu@yahoo.com</strong>
+  <span>We usually reply within 1–2 business days. To help us help you, please tell us
+  whether you are using the iOS app or the web version. For the iOS app, include your
+  iPhone model and iOS version. For the web version, include your browser name and
+  version, your operating system (for example Windows, macOS, Android or iOS), and the
+  exact website URL you were on (including the <code>#/…</code> part).</span>
+</a>
+
+<h2>Frequently asked questions</h2>
+
+<h3>1. “Start” fails, or no restaurants are found</h3>
+<ul>
+  <li><strong>iOS app:</strong> allow location access under Settings → Privacy &amp;
+      Security → Location Services → Dinner Roulette → “While Using the App”.</li>
+  <li><strong>Web version:</strong> allow location access for
+      <code>nearby-restaurant.pages.dev</code> in your browser's site permissions, or
+      use the map in “Choose your area” to drop a pin anywhere in the world instead.</li>
+  <li>Check your internet connection — restaurant data is fetched on demand.</li>
+  <li>If you see a rate-limit or quota message, wait a minute (or until the next day)
+      and try again.</li>
+</ul>
+
+<h3>2. Location is inaccurate</h3>
+<p>Location precision is decided by your device, browser and surroundings. Indoors,
+underground or among tall buildings, the device may only report the centre of an area.
+Moving outdoors or enabling Wi-Fi can help. On the web version, dropping a pin on the
+map is the most reliable way to choose your starting point.</p>
+
+<h3>3. Restaurant photos do not load</h3>
+<p>Photos are served by Google Places and need a connection. Some places simply have
+no photo on Google; a colored placeholder built from the first character of the name
+is shown instead.</p>
+
+<h3>4. Restaurant details are wrong</h3>
+<p>Names, addresses, phone numbers, ratings and opening status all come from
+<strong>Google Places</strong>, not from our own database. The fastest fix is to use
+“Report a problem” on Google Maps; the app picks up the correction automatically.</p>
+
+<h3>5. A cuisine I want is missing</h3>
+<p>The “dining preferences” list covers common cuisines only. Use the free-text search
+to look for anything else — search is not limited to the preset categories.</p>
+
+<h3>6. How do I delete my data?</h3>
+<ul>
+  <li><strong>iOS app:</strong> Settings → Data lets you clear history, favourites,
+      wheel names and draw records individually. Uninstalling the app removes all
+      local data.</li>
+  <li><strong>Web version:</strong> use your browser's site-data controls to remove
+      locally stored preferences and history.</li>
+</ul>
+<p>For general users of the restaurant picker we do not create accounts and do not
+upload your favourites or history to our servers. The optional merchant advertising
+platform is a separate service with its own account; see the
+<a href="privacy.en.html">Privacy Policy</a>.</p>
+
+<h3>7. Languages and system requirements</h3>
+<ul>
+  <li>Languages: English, Traditional Chinese, Simplified Chinese.</li>
+  <li>iOS app: iOS 15.0 or later.</li>
+  <li>Web version: a current version of Chrome, Edge, Safari or Firefox with
+      JavaScript enabled. No installation is required.</li>
+</ul>
+
+<h3>8. Web-version troubleshooting</h3>
+<ul>
+  <li><strong>Blank or stuck loading screen</strong> — hard-refresh, then check that
+      JavaScript is enabled and that a browser extension or content blocker is not
+      blocking <code>nearby-restaurant.pages.dev</code>.</li>
+  <li><strong>“City not found”, or nothing near me</strong> — use the map in “Choose
+      your area” and drop a pin at your location; the picker is not limited to any
+      preset city list.</li>
+  <li><strong>Location keeps being denied</strong> — check the site permissions in the
+      address bar, allow location for this site, then reload.</li>
+  <li><strong>Banners not appearing</strong> — ads are served from our public
+      <code>/banners/active</code> endpoint and need a connection; an empty result
+      simply means no banner is active at that moment.</li>
+  <li><strong>Reporting a web problem</strong> — please include the browser name and
+      version, the operating system, and the exact website URL so we can reproduce it.</li>
+</ul>
+
+<h3>9. Data sources</h3>
+<p>Restaurant data is provided by Google and used under the Google Maps Platform
+Terms. Opening hours and prices can change; please confirm with the restaurant
+before you go.</p>
+
+<footer>
+  Dinner Roulette (Nearby Restaurant Picker) · Restaurant data © Google, used under the
+  Google Maps Platform Terms.<br>
+  <a href="index.html">Legal documents</a> ·
+  <a href="privacy.en.html">Privacy Policy</a> ·
+  <a href="terms.en.html">Terms of Service</a> ·
+  <a href="support.en.html">Support</a>
+</footer>
+
+</main>
+</body>
+</html>
